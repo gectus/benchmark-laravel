@@ -4,6 +4,8 @@ load_balancer:
         - web
     ports:
         - "80:80"
+    environment:
+        - FORCE_SSL=True
 
 web:
     image: million12/nginx-php
