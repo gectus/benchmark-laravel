@@ -11,4 +11,4 @@ web:
         - ./:/var/www
     environment:
         - APP_ENV=production
-        - VIRTUAL_HOST="benchmark.grinev.ru"
+        - VIRTUAL_HOST=benchmark.grinev.ru 
