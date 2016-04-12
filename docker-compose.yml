@@ -5,7 +5,7 @@ load_balancer:
     ports:
         - "80:80"
     environment:
-        - VIRTUAL_HOST="benchmark.grinev.ru"
+        - VIRTUAL_HOST="46.101.124.206"
 
 web:
     image: million12/nginx-php
@@ -14,4 +14,4 @@ web:
     environment:
         - NGINX_GENERATE_DEFAULT_VHOST=True
         - STATUS_PAGE_ALLOWED_IP=95.25.145.253
-        - VIRTUAL_HOST="benchmark.grinev.ru"
+        - VIRTUAL_HOST="46.101.124.206"
