@@ -4,13 +4,11 @@ load_balancer:
         - web
     ports:
         - "80:80"
-    environment:
-        - VIRTUAL_HOST="benchmark.grinev.ru"
 
 web:
-    image: million12/nginx-php
+    image: andrewmclagan/nginx-hhvm
     volumes:
-        - ./../:/data
+        - ./:/var/www
     environment:
-        - NGINX_GENERATE_DEFAULT_VHOST=True
-        - STATUS_PAGE_ALLOWED_IP=95.25.145.253
+        - APP_ENV=production
+        - VIRTUAL_HOST="benchmark.grinev.ru"
