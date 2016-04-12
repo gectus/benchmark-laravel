@@ -1,7 +1,12 @@
-nginx:
-    image: million12/nginx-php
+load_balancer:
+    image: tutum/haproxy
+    links:
+        - nginx
     ports:
         - "80:80"
+
+nginx:
+    image: million12/nginx-php
     volumes:
         - ./../:/data
     environment:
