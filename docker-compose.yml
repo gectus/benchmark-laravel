@@ -1,5 +1,5 @@
 load_balancer:
-    image: dockercloud/haproxy
+    image: tutum/haproxy
     links:
         - web
     ports:
