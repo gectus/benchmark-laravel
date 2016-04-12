@@ -1,11 +1,9 @@
 load_balancer:
-    image: tutum/haproxy
+    image: million12/haproxy
     links:
         - nginx
     ports:
         - "80:80"
-    environment:
-        - FORCE_SSL=0
 
 nginx:
     image: million12/nginx-php
