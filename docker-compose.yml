@@ -10,5 +10,5 @@ web:
     volumes:
         - ./../:/data
     environment:
-        - NGINX_GENERATE_DEFAULT_VHOST=0
+        - NGINX_GENERATE_DEFAULT_VHOST=True
         - STATUS_PAGE_ALLOWED_IP=95.25.145.253
