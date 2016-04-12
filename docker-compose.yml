@@ -4,12 +4,9 @@ load_balancer:
         - web
     ports:
         - "80:80"
-    roles:
-      - global
 
 web:
     image: million12/nginx-php
-    target_num_containers: 3
     volumes:
         - ./../:/data
     environment:
