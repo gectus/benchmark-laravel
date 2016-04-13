@@ -1,14 +1,11 @@
-load_balancer:
-    image: tutum/haproxy
-    links:
-        - web
+web:
+    image: million12/nginx-php
+    volumes:
+        - ./../:/data
     ports:
         - "80:80"
-
-web:
-    image: andrewmclagan/nginx-hhvm
-    volumes:
-        - ./:/var/www
     environment:
         - APP_ENV=production
         - VIRTUAL_HOST=benchmark.grinev.ru 
+        - NGINX_GENERATE_DEFAULT_VHOST=true
+        - STATUS_PAGE_ALLOWED_IP=95.25.145.253
